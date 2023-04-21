@@ -22,6 +22,10 @@ def remove_duplicates_from_list(items):
     return list(set(items))
 
 
+def count_words_in_list(items):
+    return len(items)
+    print("Modified by Alejandro, funcion que cuenta las palabras del fichero")
+
 if __name__ == "__main__":
     filename = DEFAULT_FILENAME
     remove_duplicates = DEFAULT_DUPLICATES
@@ -50,5 +54,10 @@ if __name__ == "__main__":
     if remove_duplicates:
         word_list = remove_duplicates_from_list(word_list)
 
-    print(sort_list(word_list, ascending_order))
-    print("Modify by Oscar")
+    sorted_list = sort_list(word_list, ascending_order)
+    print(f"Sorted words: {sorted_list}")
+    
+    count = count_words_in_list(sorted_list)
+    print(f"Number of words: {count}")
+    
+    print("Modified by Oscar")
